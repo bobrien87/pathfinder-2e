@@ -1,0 +1,19 @@
+filters:
+  and:
+    - statblock == true
+    - file.name != "Insert Creature"
+views:
+  - type: table
+    name: Creatures by Level
+    groupBy:
+      property: level
+      direction: ASC
+    order:
+      - file.name
+      - rare_01
+      - size
+      - group
+    sort:
+      - property: group
+        direction: ASC
+    summaries: {}

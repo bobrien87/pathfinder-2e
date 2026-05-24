@@ -1,0 +1,11 @@
+/* Hide empty statblock inline items left behind by empty frontmatter properties */
+.statblock-inline-item:empty {
+    display: none !important;
+}
+
+/* Align Pathfinder 2e traits to the left and wrap nicely with a gap */
+.statblock-item-inline.pf2e-traits {
+    justify-content: flex-start !important;
+    flex-wrap: wrap;
+    gap: 6px !important;
+}

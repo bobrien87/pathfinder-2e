@@ -1,0 +1,17 @@
+filters:
+  and:
+    - type == "npc"
+    - file.name != "Insert NPC"
+views:
+  - type: table
+    name: Group by Faction
+    groupBy:
+      property: faction
+      direction: ASC
+    order:
+      - file.name
+      - title
+      - attitude
+      - occupation
+      - goal
+      - quirk

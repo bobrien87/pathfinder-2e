@@ -1,0 +1,12 @@
+{
+  "ITS@@select": "pathfinder",
+  "cupertino@@colorful-frame": false,
+  "cupertino@@adaptive-mode-off": false,
+  "ITS@@ITS-Sidebar-Styling": "none",
+  "ITS@@navbar-bottom": "none",
+  "ITS@@ITS-Sidebar-Ribbon-Float": "none",
+  "ITS@@ITS-folder-arrows": "folder-arrow-display",
+  "ITS@@file-explorer-flat": false,
+  "ITS@@file-explorer-boldless": true,
+  "ITS@@file-explorer-boldless-hover": false
+}

@@ -1,0 +1,17 @@
+filters:
+  and:
+    - type == "spell"
+    - file.name != "Insert Spell"
+views:
+  - type: table
+    name: All Spells
+    groupBy:
+      property: level
+      direction: ASC
+    order:
+      - file.name
+      - sub-type
+      - traditions
+      - traits
+      - source-type
+      - source
