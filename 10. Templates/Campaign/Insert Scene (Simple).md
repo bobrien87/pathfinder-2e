@@ -8,3 +8,6 @@ rewards:
 ### `= this.file.name`
 
 {description}
+
+#### Developments
+{developments}

@@ -1,0 +1,10 @@
+---
+type: trait
+source-type: "Remaster"
+source: "Pathfinder Core"
+---
+### `= this.file.name`
+
+A hefty shield is so heavy that raising it takes more effort. Raising a Shield with the hefty trait is a 2-action activity unless your Strength score equals or exceeds the number with the trait.
+
+**Source:** `= this.source` (`= this.source-type`)

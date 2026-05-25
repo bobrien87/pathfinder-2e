@@ -1,0 +1,23 @@
+---
+type: feat
+archetype: "[[8. System/Character Creation/Archetypes/Hellknight|Hellknight]]"
+source-type: "Remaster"
+level: "14"
+traits: ["[[Archetype]]", "[[Emotion]]", "[[Fear]]", "[[Mental]]", "[[Visual]]"]
+prerequisites: "Hellknight Preferment"
+frequency: "once per round"
+source: "Pathfinder Lost Omens Hellfire Dispatches"
+---
+### `= this.file.name`
+**Feat** `= this.level`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+
+`= choice(this.prerequisites != null and this.prerequisites != "", "**Prerequisites** " + this.prerequisites, "") + choice(this.access != null and this.access != "", choice(this.prerequisites != null and this.prerequisites != "", "<br>", "") + "**Access** " + this.access, "") + choice(this.frequency != null and this.frequency != "", choice(this.prerequisites != null and this.prerequisites != "" or this.access != null and this.access != "", "<br>", "") + "**Frequency** " + this.frequency, "") + choice(this.trigger != null and this.trigger != "", choice(this.prerequisites != null and this.prerequisites != "" or this.access != null and this.access != "" or this.frequency != null and this.frequency != "", "<br>", "") + "**Trigger** " + this.trigger, "") + choice(this.requirements != null and this.requirements != "", choice(this.prerequisites != null and this.prerequisites != "" or this.access != null and this.access != "" or this.frequency != null and this.frequency != "" or this.trigger != null and this.trigger != "", "<br>", "") + "**Requirements** " + this.requirements, "")`
+
+**Frequency** once per round
+
+**Requirements** The target has attempted a hostile action against you since your previous turn.
+
+When faced with lawbreakers, you become almost unstoppable, and your purposeful steps instill terror. Stride toward the required target with a +10-foot status bonus to your Speeds and ignoring difficult terrain. If you end your movement adjacent to the required target, each enemy adjacent to you who saw your movement becomes [[Frightened]] 2. You can use March of Law while Burrowing, Climbing, Flying, or Swimming instead of Striding if you have the corresponding movement type.
+
+**Source:** `= this.source` (`= this.source-type`)

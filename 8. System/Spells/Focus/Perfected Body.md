@@ -1,0 +1,20 @@
+---
+type: spell
+sub-type: "Focus Spell"
+source-type: "Remaster"
+level: "4"
+traits: ["[[Cleric]]", "[[Focus]]", "[[Manipulate]]"]
+cast: "`pf2:r`"
+source: "Pathfinder Player Core"
+---
+### `= this.file.name`
+`= "**Spell** " + this.level + choice(this.traditions != null and this.traditions != "", "<br>**Traditions** " + this.traditions, "")`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+
+`= "**Cast** " + this.cast + choice(this.trigger != null and this.trigger != "", "<br>**Trigger** " + this.trigger, "") + choice(this.requirements != null and this.requirements != "", "<br>**Requirements** " + this.requirements, "") + choice(this.range != null and this.range != "" or this.area != null and this.area != "" or this.targets != null and this.targets != "", "<br>" + choice(this.range != null and this.range != "", "**Range** " + this.range, "") + choice(this.area != null and this.area != "", choice(this.range != null and this.range != "", "; ", "") + "**Area** " + this.area, "") + choice(this.targets != null and this.targets != "", choice(this.range != null and this.range != "" or this.area != null and this.area != "", "; ", "") + "**Targets** " + this.targets, ""), "") + choice(this.defense != null and this.defense != "" or this.duration != null and this.duration != "", "<br>" + choice(this.defense != null and this.defense != "", "**Defense** " + this.defense, "") + choice(this.duration != null and this.duration != "", choice(this.defense != null and this.defense != "", "; ", "") + "**Duration** " + this.duration, ""), "")`
+
+**Trigger** You fail or critically fail a saving throw against an effect that has the morph, poison, or polymorph trait, or that would make you [[Clumsy]], [[Doomed]], [[Enfeebled]], [[Petrified]], or [[Sickened]].
+
+Your body's perfection keeps you just a little bit healthier than most. You get a failure if you rolled a critical failure or a success if you rolled a failure.
+
+**Source:** `= this.source` (`= this.source-type`)

@@ -1,0 +1,10 @@
+---
+type: trait
+source-type: "Remaster"
+source: "Pathfinder Core"
+---
+### `= this.file.name`
+
+Items that have the catalyst trait are consumable material spell components that alter or magnify specific spells. Activating a catalyst is part of Casting the Spell. The catalyst might increase the number of actions required to Cast the Spell, as indicated in the catalyst's Activate entry. Additionally, the spell gains the manipulate trait if it didn't already. Because the catalyst becomes part of the spell, you can draw the catalyst as part of Casting the Spell.
+
+**Source:** `= this.source` (`= this.source-type`)

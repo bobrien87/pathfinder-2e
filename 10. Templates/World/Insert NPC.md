@@ -18,12 +18,12 @@ secrets:
 ---
 ### `= this.file.name`
 **`= this.title`**
-`= choice(this.alignment != null, this.alignment + " ", "") + this.ancestry` `= choice(this.homeland != null, "(" + this.homeland + ")", "")` `= this.occupation` `= choice(this.faction != null, "(" + this.faction + ")", "")`
+`= choice(this.alignment != null and this.alignment != "", this.alignment + " ", "") + this.ancestry` `= choice(this.homeland != null and this.homeland != "", "(" + this.homeland + ")", "")` `= this.occupation` `= choice(this.faction != null and this.faction != "", "(" + this.faction + ")", "")`
 **Goal** `= this.goal`
 **Attitude** `= this.attitude`
 **Location** `= this.location`
-`= choice(this.accent != null, "**Accent** " + this.accent + choice(this.mannerism != null, ";", ""), "")` `= choice(this.mannerism != null, "**Mannerism** " + this.mannerism, "")`
-`= choice(this.quirk != null, "**Quirk** " + this.quirk, "")`
+`= choice(this.accent != null and this.accent != "", "**Accent** " + this.accent + choice(this.mannerism != null and this.mannerism != "", ";", ""), "")` `= choice(this.mannerism != null and this.mannerism != "", "**Mannerism** " + this.mannerism, "")`
+`= choice(this.quirk != null and this.quirk != "", "**Quirk** " + this.quirk, "")`
 
 {description}
 

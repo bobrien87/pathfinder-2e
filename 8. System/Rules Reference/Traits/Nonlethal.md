@@ -1,0 +1,10 @@
+---
+type: trait
+source-type: "Remaster"
+source: "Pathfinder Core"
+---
+### `= this.file.name`
+
+Attacks with this weapon are nonlethal, and are used to knock creatures unconscious instead of kill them. You can use a nonlethal weapon to make a lethal attack with a -2 circumstance penalty.
+
+**Source:** `= this.source` (`= this.source-type`)

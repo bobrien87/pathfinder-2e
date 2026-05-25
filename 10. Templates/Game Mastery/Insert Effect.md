@@ -1,18 +1,14 @@
 ---
 type: effect
 source-type: "{source-type}"
-traits: "{traits}"
+traits:
 duration: "{duration}"
 source: "{source}"
 ---
 ### `= this.file.name`
-`= choice(this.traits != null, "**Traits** " + this.traits, "")`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, ", "), "")`
 
-***
-
-`= choice(this.duration != null, "**Duration** " + this.duration, "")`
-
-***
+`= choice(this.duration != null and this.duration != "", "**Duration** " + this.duration, "")`
 
 {description}
 

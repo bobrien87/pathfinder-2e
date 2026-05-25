@@ -6,6 +6,15 @@
     "secrets": "multitext",
     "discovered": "checkbox",
     "sub-type": "text",
-    "group": "multitext"
+    "group": "multitext",
+    "key-skills": "multitext",
+    "feats": "multitext",
+    "equipment": "multitext",
+    "session-number": "number",
+    "session-date": "date",
+    "party-level": "number",
+    "player-characters": "multitext",
+    "important-npcs": "multitext",
+    "traits": "multitext"
   }
 }

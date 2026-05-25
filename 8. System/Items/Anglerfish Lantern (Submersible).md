@@ -1,0 +1,32 @@
+---
+type: item
+source-type: "Remaster"
+level: "8"
+traits: ["[[Magical]]", "[[Water]]"]
+price: "{'gp': 500}"
+usage: "held-in-one-hand"
+bulk: "1"
+source: "Pathfinder Rage of Elements"
+---
+### `= this.file.name`
+**Item** `= this.level`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+
+`= choice(this.price != null and this.price != "", "**Price** " + this.price, "") + choice(this.usage != null and this.usage != "", choice(this.price != null and this.price != "", "; ", "") + "**Usage** " + this.usage, "") + choice(this.bulk != null and this.bulk != "", choice(this.price != null and this.price != "" or this.usage != null and this.usage != "", "; ", "") + "**Bulk** " + this.bulk, "")`
+`= choice(this.activate != null and this.activate != "", "**Activate** " + this.activate, "")`
+
+This bull's-eye lantern is either stylized after an anglerfish or made from the taxidermy of one. While it can be lit as usual, the *submersible anglerfish lantern* automatically shines when submerged in water.
+
+**Activate—Mesmerizing Lights** `pf2:2` (concentrate, manipulate)
+
+**Frequency** once per hour
+
+**Effect** All creatures within the bright light of the *submersible anglerfish lantern* must succeed at a DC 24 [[Will]] save or be [[Fascinated]] by the light for 1 round (1 minute on a critical failure). The fascination ends if the light is extinguished. Aquatic animals and creatures with the water trait take a –2 circumstance penalty to this check. Regardless of the result, the creature then becomes immune to this effect for the next 24 hours.
+
+**Activate—Dive!** 1 minute (concentrate, manipulate)
+
+**Frequency** once per day
+
+**Effect** You lower the *submersible anglerfish lantern* into water at least 15 feet deep while issuing a command. The lantern transforms into a [[Bathysphere]] for 1 hour. This vehicle possesses a @Template[cone|distance:60] light that can be swiveled up to 90 degrees with an Interact action and has the activation listed above. When the effect ends, any occupants are ejected harmlessly. If the bathysphere becomes broken, the effect ends and the *submersible anglerfish lantern* is broken as well.
+
+**Source:** `= this.source` (`= this.source-type`)

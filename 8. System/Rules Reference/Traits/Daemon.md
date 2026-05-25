@@ -1,0 +1,10 @@
+---
+type: trait
+source-type: "Remaster"
+source: "Pathfinder Core"
+---
+### `= this.file.name`
+
+A family of fiends spawned on the desolate plane of Abaddon, most daemons are irredeemably unholy. They typically have darkvision and weakness to holy.
+
+**Source:** `= this.source` (`= this.source-type`)

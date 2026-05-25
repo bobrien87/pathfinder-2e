@@ -1,4 +1,6 @@
 {
   "propertiesInDocument": "hidden",
-  "showIndentGuide": false
+  "showIndentGuide": false,
+  "readableLineLength": false,
+  "defaultViewMode": "preview"
 }

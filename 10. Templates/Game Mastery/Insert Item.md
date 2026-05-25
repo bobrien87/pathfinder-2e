@@ -1,8 +1,8 @@
 ---
 type: item
 source-type: "{source-type}"
-level: {level}
-traits: "{traits}"
+level: "{level}"
+traits:
 price: "{price}"
 usage: "{usage}"
 bulk: "{bulk}"
@@ -11,14 +11,10 @@ source: "{source}"
 ---
 ### `= this.file.name`
 **Item** `= this.level`
-`= choice(this.traits != null, "**Traits** " + this.traits, "")`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, ", "), "")`
 
-***
-
-`= choice(this.price != null, "**Price** " + this.price, "") + choice(this.usage != null, choice(this.price != null, "; ", "") + "**Usage** " + this.usage, "") + choice(this.bulk != null, choice(this.price != null or this.usage != null, "; ", "") + "**Bulk** " + this.bulk, "")`
-`= choice(this.activate != null, "**Activate** " + this.activate, "")`
-
-***
+`= choice(this.price != null and this.price != "", "**Price** " + this.price, "") + choice(this.usage != null and this.usage != "", choice(this.price != null and this.price != "", "; ", "") + "**Usage** " + this.usage, "") + choice(this.bulk != null and this.bulk != "", choice(this.price != null and this.price != "" or this.usage != null and this.usage != "", "; ", "") + "**Bulk** " + this.bulk, "")`
+`= choice(this.activate != null and this.activate != "", "**Activate** " + this.activate, "")`
 
 {description}
 

@@ -1,0 +1,16 @@
+---
+type: heritage
+source-type: "Remaster"
+ancestry: "[[8. System/Character Creation/Ancestries/Kobold|Kobold]]"
+source: "Pathfinder Player Core 2"
+---
+### `= this.file.name`
+**Heritage**
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+
+`= "**Ancestry** " + this.ancestry`
+`= choice(this.prerequisites != null and this.prerequisites != "", "**Prerequisites** " + this.prerequisites, "")`
+
+You hatched in a warren with narrow tunnels that was also home to a being of primal earth energy, which has made you limber and flexible. When [[Climbing]] rock walls, stalactites, and other natural stone features, you move at half your Speed on a success and at full Speed on a critical success (and you move at full Speed on a success if you have [[Quick Climb]]). This doesn't affect you if you're using a climb Speed. If you roll a success on an Acrobatics check to [[Squeeze]], you get a critical success instead.
+
+**Source:** `= this.source` (`= this.source-type`)

@@ -5,8 +5,8 @@ location: "{[[location]]}"
 faction: "{[[faction]]}"
 ---
 ### `= this.file.name`
-**`= this.sub-type`** `= choice(this.location != null, "(" + this.location + ")", "")`
-`= choice(this.faction != null, "**Faction** " + this.faction, "")`
+**`= this.sub-type`** `= choice(this.location != null and this.location != "", "(" + this.location + ")", "")`
+`= choice(this.faction != null and this.faction != "", "**Faction** " + this.faction, "")`
 
 {description}
 

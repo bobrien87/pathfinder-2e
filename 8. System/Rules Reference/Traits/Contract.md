@@ -1,0 +1,10 @@
+---
+type: trait
+source-type: "Remaster"
+source: "Pathfinder Core"
+---
+### `= this.file.name`
+
+A contract is a type of item that magically establishes an agreement between multiple parties and typically grants magical benefits.
+
+**Source:** `= this.source` (`= this.source-type`)

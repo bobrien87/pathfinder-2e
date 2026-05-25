@@ -1,7 +1,8 @@
 ---
 type: ancestry
 source-type: "{source-type}"
-traits: "{traits}"
+rarity: "{rarity}"
+traits:
 hp: "{hp}"
 size: "{size}"
 speed: "{speed}"
@@ -11,14 +12,9 @@ languages: "{languages}"
 source: "{source}"
 ---
 ### `= this.file.name`
-`= choice(this.traits != null, "**Traits** " + this.traits, "")`
-
-***
-
-**Base HP** `= this.hp` | **Size** `= this.size` | **Speed** `= this.speed` feet
-`= choice(this.boosts != null, "**Attribute Boosts** " + this.boosts, "") + choice(this.flaws != null, choice(this.boosts != null, "<br>", "") + "**Attribute Flaws** " + this.flaws, "") + choice(this.languages != null, choice(this.boosts != null or this.flaws != null, "<br>", "") + "**Languages** " + this.languages, "")`
-
-***
+`= choice(this.rarity != null and this.rarity != "", "[[" + this.rarity + "]] ", "") + "[[" + this.size + "]] " + choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+**Base HP** `= this.hp`; **Size** `= this.size`; **Speed** `= this.speed` feet
+`= choice(this.boosts != null and this.boosts != "", "**Attribute Boosts** " + this.boosts, "") + choice(this.flaws != null and this.flaws != "", choice(this.boosts != null and this.boosts != "", "<br>", "") + "**Attribute Flaws** " + this.flaws, "") + choice(this.languages != null and this.languages != "", choice(this.boosts != null and this.boosts != "" or this.flaws != null and this.flaws != "", "<br>", "") + "**Languages** " + this.languages, "")`
 
 {description}
 

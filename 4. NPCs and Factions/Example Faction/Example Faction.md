@@ -18,8 +18,12 @@ The elite guard of Example Location.
 
 ##### Organisation
 - Lord Commander (commanding the unit)
+	- One High Mage
 	- Two Captains (each commanding a detachment)
 		- Four Sergeants (each commanding a squad)
+			- Eight Soldiers
+			- One Squad Mage
+			- One Squad Healer
 
 #### Members
 ``` dataview

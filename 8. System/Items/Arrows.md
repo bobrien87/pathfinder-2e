@@ -1,0 +1,19 @@
+---
+type: item
+source-type: "Remaster"
+level: "0"
+traits: ["[[Consumable]]"]
+price: "{'sp': 1}"
+bulk: "L"
+source: "Pathfinder Player Core"
+---
+### `= this.file.name`
+**Item** `= this.level`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+
+`= choice(this.price != null and this.price != "", "**Price** " + this.price, "") + choice(this.usage != null and this.usage != "", choice(this.price != null and this.price != "", "; ", "") + "**Usage** " + this.usage, "") + choice(this.bulk != null and this.bulk != "", choice(this.price != null and this.price != "" or this.usage != null and this.usage != "", "; ", "") + "**Bulk** " + this.bulk, "")`
+`= choice(this.activate != null and this.activate != "", "**Activate** " + this.activate, "")`
+
+These projectiles are the ammunition for bows. The shaft of an arrow is made of wood. It is stabilized in flight by fletching at one end and bears a metal head on the other.
+
+**Source:** `= this.source` (`= this.source-type`)

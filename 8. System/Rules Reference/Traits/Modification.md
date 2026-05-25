@@ -1,0 +1,10 @@
+---
+type: trait
+source-type: "Remaster"
+source: "Pathfinder Core"
+---
+### `= this.file.name`
+
+A feat with this trait alters the construction of your innovation. If you have the reconfigure class feature, you can retrain such a feat more easily.
+
+**Source:** `= this.source` (`= this.source-type`)

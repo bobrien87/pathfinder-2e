@@ -1,3 +1,27 @@
+filters:
+  and:
+    - type == "pc"
+    - file.name != "Insert Player Character"
 views:
+  - type: cards
+    name: All Player Characters
+    order:
+      - file.name
+      - goal
+      - ancestry
+      - class
+      - skills
+    image: note.portrait
+    cardSize: 250
+    imageAspectRatio: 1
   - type: table
-    name: Table
+    name: Condensed
+    order:
+      - file.name
+      - level
+      - ancestry
+      - class
+      - skills
+    sort:
+      - property: level
+        direction: ASC

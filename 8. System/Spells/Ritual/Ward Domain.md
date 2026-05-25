@@ -1,0 +1,30 @@
+---
+type: spell
+sub-type: "Ritual"
+source-type: "Remaster"
+level: "6"
+cast: "1 day"
+duration: "1 week"
+source: "Pathfinder Player Core 2"
+---
+### `= this.file.name`
+`= "**Spell** " + this.level + choice(this.traditions != null and this.traditions != "", "<br>**Traditions** " + this.traditions, "")`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+
+`= "**Cast** " + this.cast + choice(this.trigger != null and this.trigger != "", "<br>**Trigger** " + this.trigger, "") + choice(this.requirements != null and this.requirements != "", "<br>**Requirements** " + this.requirements, "") + choice(this.range != null and this.range != "" or this.area != null and this.area != "" or this.targets != null and this.targets != "", "<br>" + choice(this.range != null and this.range != "", "**Range** " + this.range, "") + choice(this.area != null and this.area != "", choice(this.range != null and this.range != "", "; ", "") + "**Area** " + this.area, "") + choice(this.targets != null and this.targets != "", choice(this.range != null and this.range != "" or this.area != null and this.area != "", "; ", "") + "**Targets** " + this.targets, ""), "") + choice(this.defense != null and this.defense != "" or this.duration != null and this.duration != "", "<br>" + choice(this.defense != null and this.defense != "", "**Defense** " + this.defense, "") + choice(this.duration != null and this.duration != "", choice(this.defense != null and this.defense != "", "; ", "") + "**Duration** " + this.duration, ""), "")`
+
+**Area** 100 feet × 100 feet, up to 50 feet high.
+
+This ritual has long been used to guard the private sanctums of powerful rulers, spellcasters, and other figures of import. You and the other casters spend the casting time burning incense, anointing doorframes, and drawing lines of powered silver across entryways. The ritual creates the following magical effects within the area; these effects are heightened to the rank of ward domain and remain throughout the duration.
+
+All gates, doors, windows, and similar apertures in the area (if any) are locked, with the effects of lock. In addition, you can obscure up to six doors, doorways, or similar entrances within the area with the effects of illusory object to appear as plain walls. Scrying spells can't perceive any stimuli from the area, and ward domain attempts to counteract teleportation effects into or out of the area, including attempts to summon creatures into the area, using a modifier equal to the ritual's save DC – 10.
+
+A successful dispel magic used on a specific effect removes only that effect (such as the lock effect on one window). A successful detonate magic ends the entire ritual.
+- **Critical Success** You create the effects described above, and you protect an area twice as large.
+- **Success** You create the effects described above.
+- **Failure** The ritual has no effect.
+- **Critical Failure** The area becomes trapped and hostile to you and your allies in a way you didn't anticipate.
+
+**Heightened (+1)** The ward covers an additional area 100 feet × 100 feet, up to 50 feet high, contiguous with the original area.
+
+**Source:** `= this.source` (`= this.source-type`)

@@ -1,0 +1,16 @@
+---
+type: action
+source-type: "Remaster"
+cast: "`pf2:r`"
+source: "Pathfinder #218: Titanbane"
+---
+### `= this.file.name`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+
+`= "**Cost** " + this.cast + choice(this.trigger != null and this.trigger != "", "<br>**Trigger** " + this.trigger, "") + choice(this.requirements != null and this.requirements != "", "<br>**Requirements** " + this.requirements, "") + choice(this.prerequisites != null and this.prerequisites != "", "<br>**Prerequisites** " + this.prerequisites, "")`
+
+**Trigger** You take damage from your heroic weakness and are not reduced to fewer than 1 Hit Point by the damage
+
+**Effect** You make a show of powering through your weakness, be it by flexing your muscles, issuing a challenging roar, laughing off the pain, or simply acting as if the damage doesn't worry you in the slightest. Your spells gain a status bonus to damage against the triggering creature equal to twice their rank; this lasts until the next time you use this reaction. In addition, the creature that damaged you with your heroic weakness must attempt a Will save against your class or spellcasting DC, whichever is higher, to avoid becoming [[Frightened]] 1 ([[Frightened]] 2 on a critical failure).
+
+**Source:** `= this.source` (`= this.source-type`)

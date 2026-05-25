@@ -1,0 +1,26 @@
+---
+type: item
+source-type: "Remaster"
+level: "5"
+traits: ["[[Magical]]", "[[Structure]]"]
+price: "{'gp': 138}"
+usage: "held-in-one-hand"
+bulk: "L"
+source: "Pathfinder GM Core"
+---
+### `= this.file.name`
+**Item** `= this.level`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+
+`= choice(this.price != null and this.price != "", "**Price** " + this.price, "") + choice(this.usage != null and this.usage != "", choice(this.price != null and this.price != "", "; ", "") + "**Usage** " + this.usage, "") + choice(this.bulk != null and this.bulk != "", choice(this.price != null and this.price != "" or this.usage != null and this.usage != "", "; ", "") + "**Bulk** " + this.bulk, "")`
+`= choice(this.activate != null and this.activate != "", "**Activate** " + this.activate, "")`
+
+This item appears to be a miniature replica of a theater. It includes a small pocket full of minute set dressing and costumed paper dolls.
+
+**Activate—Play with Dolls** (1 minute) (concentrate, manipulate)
+
+**Effect** You place the miniature theater on the ground, filling it with any set dressing and up to six figures you choose. Then, you tap a rhythm on the miniature, causing it to grow into a modest stage 20 feet wide and 15 feet deep. It's dressed with the decorations you selected, and simple mannequins wear the costumes you chose. A wooden proscenium arch frames the stage, and simple curtains along the sides conceal the wings. As a magical structure, the stage has the structure trait.
+
+All the stage's set dressing is illusory and disappears if taken more than 20 feet from the stage. The costumes are physical but with illusory embellishments that fade at the same range, revealing only plain, white smocks.
+
+**Source:** `= this.source` (`= this.source-type`)

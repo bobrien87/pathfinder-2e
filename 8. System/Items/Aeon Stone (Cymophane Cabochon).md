@@ -1,0 +1,22 @@
+---
+type: item
+source-type: "Remaster"
+level: "9"
+traits: ["[[Earth]]", "[[Invested]]", "[[Magical]]"]
+price: "{'gp': 650}"
+usage: "worn"
+bulk: "—"
+source: "Pathfinder Rage of Elements"
+---
+### `= this.file.name`
+**Item** `= this.level`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+
+`= choice(this.price != null and this.price != "", "**Price** " + this.price, "") + choice(this.usage != null and this.usage != "", choice(this.price != null and this.price != "", "; ", "") + "**Usage** " + this.usage, "") + choice(this.bulk != null and this.bulk != "", choice(this.price != null and this.price != "" or this.usage != null and this.usage != "", "; ", "") + "**Bulk** " + this.bulk, "")`
+`= choice(this.activate != null and this.activate != "", "**Activate** " + this.activate, "")`
+
+Jabalis use the *cymophane cabochon aeon stone* to keep an eye on their belongings and surroundings. You gain a +2 item bonus to Perception checks and DCs against Hide, [[Sneak]], and [[Steal]] actions.
+
+The resonant power allows you to cast [[See the Unseen]] as an arcane innate spell once per day.
+
+**Source:** `= this.source` (`= this.source-type`)

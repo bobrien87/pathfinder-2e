@@ -14,10 +14,8 @@ source: "{source}"
 source-type: "{source-type}"
 ---
 ### `= this.file.name`
-**`= choice(this.level != null, "Level " + this.level + " ", "") + choice(this.sub-type != null, this.sub-type, "Settlement")`**`= choice(this.alignment != null, "; **" + this.alignment + "**", "")`
-`= choice(this.location != null, "**Location** " + this.location, "") + choice(this.government != null, choice(this.location != null, "; ", "") + "**Government** " + this.government, "") + choice(this.ruler != null, choice(this.location != null or this.government != null, "; ", "") + "**Ruler** " + this.ruler, "") + choice(this.population != null, choice(this.location != null or this.government != null or this.ruler != null, "<br>", "") + "**Population** " + this.population + choice(this.demographics != null, " (" + this.demographics + ")", ""), "") + choice(this.languages != null or this.religions != null, choice(this.location != null or this.government != null or this.ruler != null or this.population != null, "<br>", "") + choice(this.languages != null, "**Languages** " + this.languages, "") + choice(this.religions != null, choice(this.languages != null, "; ", "") + "**Religions** " + this.religions, ""), "")`
-
-***
+**`= choice(this.level != null and this.level != "", "Level " + this.level + " ", "") + choice(this.sub-type != null and this.sub-type != "", this.sub-type, "Settlement")`**`= choice(this.alignment != null and this.alignment != "", "; **" + this.alignment + "**", "")`
+`= choice(this.location != null and this.location != "", "**Location** " + this.location, "") + choice(this.government != null and this.government != "", choice(this.location != null and this.location != "", "; ", "") + "**Government** " + this.government, "") + choice(this.ruler != null and this.ruler != "", choice(this.location != null and this.location != "" or this.government != null and this.government != "", "; ", "") + "**Ruler** " + this.ruler, "") + choice(this.population != null and this.population != "", choice(this.location != null and this.location != "" or this.government != null and this.government != "" or this.ruler != null and this.ruler != "", "<br>", "") + "**Population** " + this.population + choice(this.demographics != null and this.demographics != "", " (" + this.demographics + ")", ""), "") + choice(this.languages != null and this.languages != "" or this.religions != null and this.religions != "", choice(this.location != null and this.location != "" or this.government != null and this.government != "" or this.ruler != null and this.ruler != "" or this.population != null and this.population != "", "<br>", "") + choice(this.languages != null and this.languages != "", "**Languages** " + this.languages, "") + choice(this.religions != null and this.religions != "", choice(this.languages != null and this.languages != "", "; ", "") + "**Religions** " + this.religions, ""), "")`
 
 {description}
 
@@ -36,4 +34,4 @@ LIST title
 WHERE location = this.file.link AND (type = "npc" OR type = "pc")
 ```
 
-**Source:** `= this.source` `= choice(this.source-type != null, "(" + this.source-type + ")", "")`
+**Source:** `= this.source` `= choice(this.source-type != null and this.source-type != "", "(" + this.source-type + ")", "")`

@@ -1,0 +1,13 @@
+{
+  "embedHeight": "auto",
+  "maxEmbedHeight": "none",
+  "collapsePropertiesByDefault": true,
+  "showInlineTitle": false,
+  "renderAsCallout": false,
+  "enableCommandInterception": true,
+  "gapBetweenEmbeds": "16px",
+  "lazyLoadThreshold": "100px",
+  "showFocusHighlight": false,
+  "showHeaderHints": true,
+  "debugMode": false
+}

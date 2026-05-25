@@ -1,0 +1,27 @@
+---
+type: spell
+sub-type: "Spell"
+source-type: "Remaster"
+level: "2"
+traits: ["[[Concentrate]]", "[[Darkness]]", "[[Manipulate]]", "[[Shadow]]"]
+cast: "`pf2:2`"
+range: "touch"
+targets: "1 willing creature"
+duration: "10 minutes"
+source: "Pathfinder Lost Omens Divine Mysteries"
+---
+### `= this.file.name`
+`= "**Spell** " + this.level + choice(this.traditions != null and this.traditions != "", "<br>**Traditions** " + this.traditions, "")`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+
+`= "**Cast** " + this.cast + choice(this.trigger != null and this.trigger != "", "<br>**Trigger** " + this.trigger, "") + choice(this.requirements != null and this.requirements != "", "<br>**Requirements** " + this.requirements, "") + choice(this.range != null and this.range != "" or this.area != null and this.area != "" or this.targets != null and this.targets != "", "<br>" + choice(this.range != null and this.range != "", "**Range** " + this.range, "") + choice(this.area != null and this.area != "", choice(this.range != null and this.range != "", "; ", "") + "**Area** " + this.area, "") + choice(this.targets != null and this.targets != "", choice(this.range != null and this.range != "" or this.area != null and this.area != "", "; ", "") + "**Targets** " + this.targets, ""), "") + choice(this.defense != null and this.defense != "" or this.duration != null and this.duration != "", "<br>" + choice(this.defense != null and this.defense != "", "**Defense** " + this.defense, "") + choice(this.duration != null and this.duration != "", choice(this.defense != null and this.defense != "", "; ", "") + "**Duration** " + this.duration, ""), "")`
+
+You wrap the target in shadows, granting it a +1 status bonus to Stealth checks to Hide while in dim light or darkness. In addition, the shadows mask the target's features. While the target is in dim light or darkness, other creatures must succeed at a [[Seek]] action against the spell's DC to discern details about its appearance. For example, without using Seek, other creatures can determine the target's general shape (such as humanoid), but they must Seek to determine the target's precise appearance. Creatures with darkvision can still see the target and its features normally. The target's normal appearance is revealed in bright light.
+
+**Heightened (4th)** The status bonus is +2. Creatures with darkvision can no longer discern details about the target while the target is in dim light or darkness without Seeking, though creatures with greater darkvision can still determine these details.
+
+**Heightened (6th)** As 4th rank, except the status bonus is +3, and creatures without darkvision can't determine even general details about the target while the target is in dim light or darkness unless they successfully Seek the target; these creatures see a vague shadow instead. Even on a successful Seek, they only determine general features, though they can see details on a critical success.
+
+**Heightened (8th)** As 6th rank, except the status bonus is +4, and even creatures with greater darkvision must Seek to discern details about the target while the target is in dim light or darkness.
+
+**Source:** `= this.source` (`= this.source-type`)

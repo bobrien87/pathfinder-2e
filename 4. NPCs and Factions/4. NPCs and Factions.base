@@ -4,7 +4,7 @@ filters:
     - file.name != "Insert NPC"
 views:
   - type: table
-    name: Group by Faction
+    name: NPCs by Faction
     groupBy:
       property: faction
       direction: ASC

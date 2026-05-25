@@ -1,0 +1,19 @@
+---
+type: action
+source-type: "Remaster"
+traits: ["[[Arcane]]", "[[Concentrate]]"]
+cast: "`pf2:2`"
+source: "Pathfinder #220: Crypt of Runes"
+---
+### `= this.file.name`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+
+`= "**Cost** " + this.cast + choice(this.trigger != null and this.trigger != "", "<br>**Trigger** " + this.trigger, "") + choice(this.requirements != null and this.requirements != "", "<br>**Requirements** " + this.requirements, "") + choice(this.prerequisites != null and this.prerequisites != "", "<br>**Prerequisites** " + this.prerequisites, "")`
+
+**Frequency** once per day
+
+**Effect** Spend 1 Mythic Point. You summon the spirit of one of the seven runelords of sloth (Xirie, Ilthyrius, Azeradni, Zalelet, Krenlith, Ivarinna, or Krune) into an unoccupied space within 30 feet. Allies can move through a space occupied by one of these spirits, but a spirit's space is greater difficult terrain for your enemies.
+
+For the next minute, you can use a two-action activity with the concentrate trait to summon another runelord spirit in a different space within 30 feet, to a maximum of seven spirits. While you are within 120 feet of Xanderghul, the Runelord of Pride, you can summon an additional spirit as a single action (instead of as a two-action activity). At the end of the each of your turns, each spirit fires arcane energy at a different enemy of your choice within 120 feet of it (or does nothing if no enemy is within range), dealing @Damage[(2d4+2)[force]] damage. After 1 minute, all spirits disappear.
+
+**Source:** `= this.source` (`= this.source-type`)

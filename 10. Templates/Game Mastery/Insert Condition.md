@@ -1,13 +1,11 @@
 ---
 type: condition
 source-type: "{source-type}"
-traits: "{traits}"
+traits:
 source: "{source}"
 ---
 ### `= this.file.name`
-`= choice(this.traits != null, "**Traits** " + this.traits, "")`
-
-***
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, ", "), "")`
 
 {description}
 

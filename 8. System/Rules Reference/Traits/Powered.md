@@ -1,0 +1,10 @@
+---
+type: trait
+source-type: "Remaster"
+source: "Pathfinder Core"
+---
+### `= this.file.name`
+
+This melee weapon uses a battery. You can activate or deactivate a powered weapon with an Interact action or as part of drawing or stowing it. This weapon comes with a commercial battery installed and uses 1 charge per day (rather than 1 charge per attack). If you try to attack with a powered weapon that's out of charges or is deactivated, it functions as an improvised weapon.
+
+**Source:** `= this.source` (`= this.source-type`)

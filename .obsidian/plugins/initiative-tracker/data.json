@@ -1,6 +1,24 @@
 {
-  "players": [],
-  "parties": [],
+  "players": [
+    {
+      "note": "Example PC",
+      "path": "2. Player Characters/Example PC.md",
+      "name": "Example PC",
+      "ac": 14,
+      "hp": 26,
+      "level": 3,
+      "modifier": 3,
+      "player": true
+    }
+  ],
+  "parties": [
+    {
+      "name": "Party",
+      "players": [
+        "Example PC"
+      ]
+    }
+  ],
   "defaultParty": null,
   "statuses": [
     {
@@ -142,7 +160,7 @@
     "logFile": "",
     "rollHP": false
   },
-  "condense": false,
+  "condense": true,
   "clamp": true,
   "autoStatus": true,
   "beginnerTips": true,

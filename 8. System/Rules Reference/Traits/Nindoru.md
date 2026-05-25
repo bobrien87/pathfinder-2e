@@ -1,0 +1,10 @@
+---
+type: trait
+source-type: "Remaster"
+source: "Pathfinder Core"
+---
+### `= this.file.name`
+
+Nindorus are chaotic evil fiends that rise from corruptions to the cycle of reincarnating souls and live on the Universe. Although they often have elements in their appearance that make them seem undead, they're actually living beings. Most nindorus have darkvision, are immune to death effects, have weakness to silver, and possess the power to manifest objects or creatures from their thoughts.
+
+**Source:** `= this.source` (`= this.source-type`)

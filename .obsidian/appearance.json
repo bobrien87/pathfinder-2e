@@ -3,6 +3,7 @@
   "enabledCssSnippets": [
     "S - Encoded Fonts",
     "S - Encoded Icons",
-    "statblock-custom"
+    "statblock-custom",
+    "trait-pills"
   ]
 }

@@ -10,7 +10,7 @@ homeland: "[[Example Location]]"
 ancestry: "[[Human]]"
 alignment: "[[Lawful Good|LG]]"
 accent: Posh
-mannerism: "{mannerism}"
+mannerism: Prone to staring into the distance
 quirk: Survived orc massacre at [[Example Location]]
 secrets:
   - "[[Example Discovery]]"

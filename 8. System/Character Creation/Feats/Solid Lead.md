@@ -1,0 +1,18 @@
+---
+type: feat
+source-type: "Remaster"
+level: "2"
+traits: ["[[Investigator]]"]
+source: "Pathfinder Player Core 2"
+---
+### `= this.file.name`
+**Feat** `= this.level`
+`= choice(this.traits != null and length(this.traits) > 0, join(this.traits, " "), "")`
+
+`= choice(this.prerequisites != null and this.prerequisites != "", "**Prerequisites** " + this.prerequisites, "") + choice(this.access != null and this.access != "", choice(this.prerequisites != null and this.prerequisites != "", "<br>", "") + "**Access** " + this.access, "") + choice(this.frequency != null and this.frequency != "", choice(this.prerequisites != null and this.prerequisites != "" or this.access != null and this.access != "", "<br>", "") + "**Frequency** " + this.frequency, "") + choice(this.trigger != null and this.trigger != "", choice(this.prerequisites != null and this.prerequisites != "" or this.access != null and this.access != "" or this.frequency != null and this.frequency != "", "<br>", "") + "**Trigger** " + this.trigger, "") + choice(this.requirements != null and this.requirements != "", choice(this.prerequisites != null and this.prerequisites != "" or this.access != null and this.access != "" or this.frequency != null and this.frequency != "" or this.trigger != null and this.trigger != "", "<br>", "") + "**Requirements** " + this.requirements, "")`
+
+Sometimes your case splinters into smaller mysteries, but you never lose sight of the big picture. Once per day when you give up on the subject of a lead due to using [[Pursue a Lead]] again, you can designate the lead you stopped pursuing as your solid lead for the day. Even though you stopped following the solid lead, you can change back to your solid lead any number of times by using a single action, which has the concentrate trait. Doing so ends one of your current leads as normal.
+
+During your next daily preparations, you can maintain your solid lead or you can remove it; removing it allows you to designate a new solid lead later that day.
+
+**Source:** `= this.source` (`= this.source-type`)

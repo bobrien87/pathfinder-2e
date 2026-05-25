@@ -17,3 +17,17 @@ views:
       - property: group
         direction: ASC
     summaries: {}
+  - type: table
+    name: Creatures by Group
+    groupBy:
+      property: group
+      direction: ASC
+    order:
+      - level
+      - file.name
+      - rare_01
+      - size
+    sort:
+      - property: level
+        direction: ASC
+    summaries: {}

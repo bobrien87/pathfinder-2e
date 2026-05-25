@@ -9,3 +9,13 @@
     flex-wrap: wrap;
     gap: 6px !important;
 }
+
+/* Force a consistent hanging indent on all Pathfinder 2e trait properties (abilities, attacks, spellcasting, etc.) */
+.statblock .statblock-content .statblock-trait-prop > .property:has(> .property-name) {
+    margin-left: 1em !important;
+}
+
+.statblock .statblock-content .statblock-trait-prop > .property > .property-name {
+    margin-left: -1em !important;
+}
+

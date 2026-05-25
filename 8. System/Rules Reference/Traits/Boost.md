@@ -1,0 +1,10 @@
+---
+type: trait
+source-type: "Remaster"
+source: "Pathfinder Core"
+---
+### `= this.file.name`
+
+You can boost this weapon with an Interact action to add an additional damage die of the listed size to the next damaging attack you make with the weapon until the end of your next turn. The damage from this trait increases to 2 dice for advanced-grade and superior-grade weapons, 3 dice for elite-grade and ultimate-grade weapons, and 4 dice for paragon-grade weapons. On a critical hit, roll these after doubling the weapon's damage. Multiple boosts have no effect.
+
+**Source:** `= this.source` (`= this.source-type`)
